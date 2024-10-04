@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moives</title>
+    <link rel="icon" href="images/icon2.webp">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="navbar">
+        <h1>MOIVES REVIEW</h1>
+    </div>
+    <div id="container" class="box1">
+        <!-- <div class="gameof" id="gameoff">
+            <img class="gameofimage" src="images/new1.jpg">
+            <h1 style="color: #fd6569;">Games of Thrones</h1>
+            <h3 class="reele">Released On:</h3>
+            <h2 class="Yea">2011-04</h2>
+            <h2 class="link12"onclick="window.open('https://www.primevideo.com/region/eu/detail/Game-of-Thrones/0NZG3AUJEXFXKKDLKRB7KAI0S2','_blank')"style="cursor: pointer;">watch</h2>
+            <p style="padding: 5px;">It's definitely a must watch show and shouldn't be missed
+                In Game of Thrones, The storyline is full of unpredictable surprises which leave you scratching your head.
+                Every season has its own set of twists and turns which keeps the audience entertained, thrilled and glued to the screen till the last episode.
+                Also, it's though it falls under the fantasy genre it has great humor, good action seen, plenty of romance, amount of politics and lots more. 
+            </p>
+            <h4 class="reviewwdby">Reviewed by : </h4>
+            <h3 class="reviewname"> Kandhan</h3><br>
+            <h4 class="email1">Email :</h4>
+            <h3 class="Emailid">codeswithkandhan@gmail.com</h3><br>
+            <button id="deletee" style="padding: 5px; margin: 10px; width: 80px; background-color: #fd6569; border-radius: 10px; cursor: pointer; border: none;" onclick=" deletee(event)">Delete</button>
+    
+        </div> -->
+    </div>
+
+    <button class="addbutton" id="addmoive" onclick="plus()">+</button>
+    <div class="overley"></div>
+    <div class="popup1">
+        <h1 class="poplabel">Add Moive</h1>
+        <input id="yourname" class="yourname" placeholder="Enter your Name"> <br> 
+        <input type="email" id="youremail" class="youremail" placeholder="Enter your Email">  
+        <input id="moivename" class="popintput1" placeholder="Moive Name"><br>
+        <input id="moivelink" class="popintput2_1" placeholder="Moive Link"><br>
+        <input type="month" id="Year12" class="popintput2" placeholder="Year of the Moive">
+
+        <label for="file-upload" class="custom-file-label">Upload Movie Image</label>
+        <span class="file-name">No file chosen</span>
+        <input id="file-upload" class="addimage" type="file" placeholder="Choose image">
+
+
+        <textarea id="review1" class="popintput3" placeholder="Moive review"></textarea><br>
+         
+        <button id="addmoive" class="addmoive" onclick="addmoive1()">Add</button>
+        <button class="reset1" type="reset" onclick="resert()">Reset</button>
+        <button class="popclose" onclick="addcancel(event)">Cancel</button>
+         
+        
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
