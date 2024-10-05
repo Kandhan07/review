@@ -318,7 +318,7 @@ textarea:focus{
 @media all and (max-width: 400px)
 {
     .gameof{
-        width: 230px;
+        width: 250px;
         height: fit-content;
         font-size: small;
     }
