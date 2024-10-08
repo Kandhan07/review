@@ -105,6 +105,7 @@ function saveAndDisplayMovie(movie) {
 
     // Add the movie to the DOM
     addMovieToDOM(movie);
+    alert(`${movie.movieName} has been added successfully!`);
 }
 
 // Load movies from localStorage when the page loads
