@@ -456,6 +456,89 @@ textarea:focus{
 /* mobile media */
 
 /* First handle the larger screens up to 415px */
+@media (max-width: 1280px)
+{
+    
+    .gameof{
+        width: 350px;
+        height: auto;
+        font-size: small;
+        margin: 0%;
+        margin-left: 20px;
+    }
+    .navbar{
+        width: 100%;
+        font-size: small;
+        box-sizing: border-box;
+        
+    }
+    
+     
+    .popup1{
+        width: 80%;
+        font-size: smaller;
+        left: 10%;
+        top: 25%;
+    }
+    .yourname{
+        width: 90%;
+    }
+    .youremail{
+        width: 90%;
+    }
+    .popinput1{
+        width: 90%;
+    }
+    .popinput2_1{
+        width: 90%;
+    }
+    .label1{
+        font-size: medium;
+        margin: 0%;
+        margin-left: 20px;
+        
+    }
+    .popinput2{
+        width: 55%;
+    }
+     
+    .custom-file-label{
+        width: 35%;
+        margin: 0%;
+        margin-left: 53px;  
+        width: 52%;
+    }
+    .popinput3{
+        width: 90%;
+    }
+
+    .addmovie{
+        width: 100px;
+        height: 60px;
+        margin: 0%;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+    }
+    .reset1{
+        width: 100px;
+        height: 60px;
+        margin: 0%;
+        margin-left: 10px; 
+
+    }
+
+    .popclose{
+        width: 100px;
+        height: 60px;
+        margin: 0%;
+        margin-left: 10px; 
+        margin-bottom: 10px;
+
+    }
+}
+
 @media (max-width: 1030px)
 {
     
