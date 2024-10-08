@@ -1,8 +1,11 @@
 *{
     padding: 0%;
     margin: 0%;
+    box-sizing: border-box;
     
 }
+
+ 
 
 body
 {
@@ -30,32 +33,47 @@ body
     color: black;
     padding: 10px;
     padding-left: 3%;
+    font-size: medium ;
+    width: 150%;
+    position: none;
+     
+}
+
+#container {
+    display: flex;                /* Flexbox layout */
+    flex-wrap: wrap;     
+            /* Allow items to wrap to a new line */
+    gap: 30px;                    /* Space between movie review cards */
+          /* Center the items in the middle */
+    padding: 20px;                /* Padding around the container */
 }
 
 .gameof{
     padding: 20px;
-    margin: 30px;
-    background-color: black;
+    margin: 10px;
+    margin-left: 20px;
+    background-color: black;   
     color: white;
-    width: 25%;
-    border-radius: 10px;
+    border-radius: 20px;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: top;  
+    width: 410px;
+    height: 720px;
+    font-size: medium;
+ 
 
-     
-    
-     
-     
 
 }
  
 .gameofimage{
-    width: 98%;
+    
     height: max-content;
     border: solid #fd6569 3px;
     border-radius: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
+    height: 250px;
+    width: 100%;
      
 }
 
@@ -106,9 +124,17 @@ body
     bottom: 30px;
     right: 30px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.overley{
+.addbutton:hover {
+    background-color:rgb(110, 234, 154); /* Darken color on hover */
+    box-shadow: 4px 4px 15px rgba(12, 200, 94, 0.5);
+    
+}
+
+
+.overlay{
     background-color: black;
     width: 100%;
     position: fixed; /* Or use 'fixed' if it should scroll with the viewport */
@@ -122,17 +148,36 @@ body
 
 }
 
+.default {
+    background-color: #fd6569;
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    color: black;
+    border-radius: 30px;    
+    cursor: pointer;       
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.default:hover {
+    background-color:rgb(110, 234, 154); /* Darken color on hover */
+    box-shadow: 4px 4px 15px rgba(12, 200, 94, 0.5);
+    
+}
+
+
 .popup1{
     background-color: #fd6569;
     color: black;
-    position: absolute;
     width: 40%;
     height: auto;
     left: 30%;
-    top: 20%;
+    top: 10%;
     border-radius: 20px;
     display: none;
     z-index: 2;
+    position: fixed;
+    
     
     
 }
@@ -166,7 +211,7 @@ body
     font-size: medium;
 }
 
-.popintput1{
+.popinput1{
     background-color: transparent;
     border: none;
     margin-top: 10px;
@@ -183,21 +228,25 @@ body
     
 }
 
-.popintput2{
+.label1{
+     margin-left: 20px;
+}
+
+.popinput2{
+    display: inline;
     margin-top: 10px;
     margin-left: 20px;
     margin-bottom: 10px;
-    padding: 5px;
-    width: 30%;
-    height: 22px;
+    padding: 10px;
+    width: 26%;
+    height: 27px;
     background-color: #fd6569;
     border: solid black 3px;
     border-radius: 5px;
-     
     font-size: medium;
 }
 
-.popintput2_1{
+.popinput2_1{
     border: none;
     margin-top: 10px;
     margin-left: 20px;
@@ -209,20 +258,21 @@ body
     font-size: medium;
 }
 
-.popintput3{
+.popinput3{
     margin-top: 10px;
     margin-left: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 0%;
     padding-right: 5px;
     width: 90%;
-    height: 60px;
+     
     background-color: #fd6569;
     border: black solid 3px;
     border-radius: 5px;
     padding-left: 5px;
     padding-top: 0%;
     font-size: large;
-    resize: vertical;
+    resize: none;
+    
 
 }
 
@@ -238,22 +288,35 @@ input[type="file"] {
     font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 57px;
     border-color: #000;
-    border-style: solid;    
+    border-style: solid;   
+    width: 160px; 
 }
 
 /* You can also style the file name text */
 .file-name {
     font-size: 14px;
     color: #000;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
+.count1{
+    margin-left: 25px;
+    display: inline;
+}
+.count2{
+    margin-left: 10px;
+    display: inline;
+}
  
+.label2{
+    margin-left: 20px;
+    
+}
 
 
-.addmoive{  
+.addmovie{  
     margin: 10px;
     margin-left: 5%;
     padding: 10px;
@@ -265,7 +328,15 @@ input[type="file"] {
     border-color: black;
     border-style: solid;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
+
+.addmovie:hover {
+    background-color:rgb(110, 234, 154); /* Darken color on hover */
+    border-color: rgb(110, 234, 154);
+    box-shadow: 4px 4px 15px rgba(20, 105, 57, 0.5);
+}
+
 
 .reset1{
     margin: 10px;
@@ -279,7 +350,33 @@ input[type="file"] {
     border-color: black;
     border-style: solid;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
 
+.reset1:hover {
+    background-color:rgba(222, 219, 16, 0.944); /* Darken color on hover */
+    border-color:rgba(222, 219, 16, 0.944) ;
+    box-shadow: 4px 4px 15px rgba(227, 227, 8, 0.5);
+    
+}
+
+
+.delete-button {
+    display: block;
+    background-color: #fd6569; 
+    color: black;           
+    border: none;   
+    width: 100%;       
+    padding: 10px;
+    margin-top: 10px;   
+    border-radius: 30px;    
+    cursor: pointer;       
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.delete-button:hover {
+    background-color: rgb(199, 26, 14); /* Darken color on hover */
+    box-shadow: 4px 4px 15px rgba(247, 4, 4, 0.5);
 }
 
 .popclose{
@@ -293,8 +390,15 @@ input[type="file"] {
     border-color: black;
     border-style: solid;
     cursor: pointer;
-
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
+
+.popclose:hover {
+    background-color:red; /* Darken color on hover */
+    border-color: red;
+    box-shadow: 4px 4px 15px rgba(225, 29, 19, 0.853);
+}
+
 
 input::placeholder {
     color: black;
@@ -314,15 +418,592 @@ textarea:focus{
 
 }
 
+
 /* media */
-@media all and (max-width: 400px)
-{
-    .gameof{
+/* @media only screen and (min-width: 252px09) {
+    .gameof {
         width: 250px;
         height: fit-content;
         font-size: small;
     }
 
+} */
+
+/* Styles for screens wider than 768px (e.g., tablets and up) */
+/* @media only screen and (min-width: 768px) {
+    .container {
+        width: 70%;
+        margin: 0 auto;
+    }
 }
 
+/* Styles for mobile devices (screens narrower than 768px) */
+/* @media only screen and (max-width: 767px) {
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
 
+/* Styles for very large screens */
+/* @media only screen and (min-width: 1200px) {
+    .container {
+        width: 50%;
+        margin: 0 auto;
+    }
+} */ 
+
+/* mobile media */
+
+/* First handle the larger screens up to 415px */
+@media (max-width: 1030px)
+{
+    
+     
+    .popup1{
+        width: 80%;
+        font-size: smaller;
+        left: 10%;
+        top: 25%;
+    }
+    .yourname{
+        width: 90%;
+    }
+    .youremail{
+        width: 90%;
+    }
+    .popinput1{
+        width: 90%;
+    }
+    .popinput2_1{
+        width: 90%;
+    }
+    .label1{
+        font-size: medium;
+        margin: 0%;
+        margin-left: 20px;
+        
+    }
+    .popinput2{
+        width: 55%;
+    }
+     
+    .custom-file-label{
+        width: 35%;
+        margin: 0%;
+        margin-left: 53px;  
+        width: 52%;
+    }
+    .popinput3{
+        width: 90%;
+    }
+
+    .addmovie{
+        width: 100px;
+        height: 60px;
+        margin: 0%;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+    }
+    .reset1{
+        width: 100px;
+        height: 60px;
+        margin: 0%;
+        margin-left: 10px; 
+
+    }
+
+    .popclose{
+        width: 100px;
+        height: 60px;
+        margin: 0%;
+        margin-left: 10px; 
+        margin-bottom: 10px;
+
+    }
+}
+
+ 
+
+@media (max-width: 830px)
+{
+    .gameof{
+        width: 330px;
+        height: auto;
+        font-size: medium;
+         
+        
+    }
+    .overlay{
+        top: 0%;
+        bottom: 0%;
+    }
+
+    .navbar{
+        width: 100%;
+        font-size: small;
+    }
+    .addbutton {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        font-size: 50px;
+        bottom: 90px;
+        
+    }
+    
+  
+    
+      /* popup total  */
+    .popup1{
+        width: 80%;
+        font-size: large;
+        left: 10%;
+        top: 25%;
+    }
+    .yourname{
+        width: 90%;
+    }
+    .youremail{
+        width: 90%;
+    }
+    .popinput1{
+        width: 90%;
+    }
+    .popinput2_1{
+        width: 90%;
+    }
+    .label1{
+        font-size: medium;
+        margin: 0%;
+        margin-left: 20px;
+        
+    }
+    .popinput2{ 
+        width: 55%;
+    }
+    
+    .custom-file-label{
+        width: 35%;
+        margin: 0%;
+        margin-left: 53px;  
+        width: 52%;
+    }
+    .popinput3{
+        width: 90%;
+    }
+
+    .addmovie{
+        width: 100px;
+        height: 60px;
+        margin: 0%;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+    }
+    .reset1{
+        width: 100px;
+        height: 60px;
+        margin: 0%;
+        margin-left: 10px; 
+
+    }
+
+    .popclose{
+        width: 100px;
+        height: 60px;
+        margin: 0%;
+        margin-left: 10px; 
+        margin-bottom: 10px;
+
+    }
+}
+@media (max-width: 770px)
+{
+    .gameof{
+        width: 300px;
+        height: auto;
+        font-size: medium;
+         
+         
+    }
+    .overlay{
+        top: 0%;
+        bottom: 0%;
+    }
+
+    .navbar{
+        width: 100%;
+        font-size: small;
+    }
+    .addbutton{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        font-size: 50px;
+        bottom: 90px;
+    } 
+      /* popup total  */
+    .popup1{
+        width: 80%;
+        font-size: smaller;
+        left: 10%;
+        top: 25%;
+    }
+    .yourname{
+        width: 90%;
+    }
+    .youremail{
+        width: 90%;
+    }
+    .popinput1{
+        width: 90%;
+    }
+    .popinput2_1{
+        width: 90%;
+    }
+    .label1{
+        font-size: medium;
+        margin: 0%;
+        margin-left: 20px;
+        
+    }
+    .popinput2{
+        width: 55%;
+    }
+     
+    .custom-file-label{
+        width: 35%;
+        margin: 0%;
+        margin-left: 53px;  
+        width: 52%;
+    }
+    .popinput3{
+        width: 90%;
+    }
+
+    .addmovie{
+        width: 100px;
+        height: 60px;
+        margin: 0%;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+    }
+    .reset1{
+        width: 100px;
+        height: 60px;
+        margin: 0%;
+        margin-left: 10px; 
+
+    }
+
+    .popclose{
+        width: 100px;
+        height: 60px;
+        margin: 0%;
+        margin-left: 10px; 
+        margin-bottom: 10px;
+
+    }
+}
+
+@media (max-width: 440px){
+    .gameof{
+        width: 350px;
+        height: auto;
+        font-size: small;
+        margin: 0%;
+        margin-left: 20px;
+    }
+    .overlay{
+        top: 0%;
+        bottom: 0%;
+    }
+
+    .navbar{
+        width: 100%;
+        font-size: small;
+    }
+    .addbutton{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 30px;
+        bottom: 90px;
+    } 
+      /* popup total  */
+    .popup1{
+        width: 80%;
+        font-size: smaller;
+        left: 10%;
+        top: 25%;
+    }
+    .yourname{
+        width: 80%;
+    }
+    .youremail{
+        width: 80%;
+    }
+    .popinput1{
+        width: 80%;
+    }
+    .popinput2_1{
+        width: 80%;
+    }
+    .label1{
+        font-size: small;
+        margin: 0%;
+        margin-left: 20px;
+    }
+    .popinput2{
+        width: 35%;
+    }
+     
+    .custom-file-label{
+        width: 35%;
+        margin: 0%;
+        margin-left: 15px;
+    }
+    .popinput3{
+        width: 80%;
+    }
+
+    .addmovie{
+        width: 60px;
+        height: 40px;
+        margin: 0%;
+        margin-left: 20px;
+        margin-top: 10px;
+        
+    }
+    .reset1{
+        width: 60px;
+        height: 40px;
+        margin: 0%;
+        margin-left: 10px;  
+    }
+
+    .popclose{
+        width: 60px;
+        height: 40px;
+        margin: 0%;
+        margin-left: 10px; 
+        margin-bottom: 10px;
+
+    }
+}   
+@media (max-width: 415px) {
+    .gameof {
+        width: 330px;
+        height: auto;
+        margin: 0%;
+        margin-left: 20px;
+    }
+    .overlay{
+        top: 0%;
+        bottom: 0%;
+    }
+
+    .navbar{
+        width: 100%;
+        font-size: small;
+    }
+    .addbutton{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 30px;
+        bottom: 90px;
+    } 
+      /* popup total  */
+    .popup1{
+        width: 80%;
+        font-size: smaller;
+        left: 10%;
+        top: 20%;
+    }
+    .yourname{
+        width: 80%;
+    }
+    .youremail{
+        width: 80%;
+    }
+    .popinput1{
+        width: 80%;
+    }
+    .popinput2_1{
+        width: 80%;
+    }
+    .label1{
+        font-size: small;
+        margin: 0%;
+        margin-left: 20px;
+    }
+    .popinput2{
+        width: 35%;
+    }
+    
+    .custom-file-label{
+        width: 35%;
+        margin: 0%;
+        margin-left: 15px;
+    }
+    .popinput3{
+        width: 80%;
+    }
+
+    .addmovie{
+        width: 60px;
+        height: 40px;
+        margin: 0%;
+        margin-left: 20px;
+        margin-top: 10px;
+        
+    }
+    .reset1{
+        width: 60px;
+        height: 40px;
+        margin: 0%;
+        margin-left: 10px;  
+    }
+
+    .popclose{
+        width: 60px;
+        height: 40px;
+        margin: 0%;
+        margin-left: 10px; 
+        margin-bottom: 10px;
+
+    }
+}
+@media (max-width: 400px){
+    .gameof{
+        width: 330px;
+        height: auto;
+        font-size: small; 
+        margin: 0%;
+        margin-left: 10px;
+         
+        margin-bottom: 20px;
+    }
+    .popup1{
+        width: 80%;
+        font-size: smaller;
+        left: 10%;
+        top: 50px;
+    }
+}
+
+@media (max-width: 380px){
+    .gameof{
+        width: 330px;
+        height: auto;
+        font-size: small;
+         
+        margin: 0%;
+         
+        margin-bottom: 20px;
+    }
+    .popup1{
+        width: 80%;
+        font-size: smaller;
+        left: 10%;
+        top: 50px;
+    }
+}
+/* Then handle smaller screens up to 321px */
+@media (max-width: 321px) {
+    .gameof{
+        width: 250px;
+        height: auto;
+        font-size: small;
+        margin: 0%;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+    .overlay{
+        top: 0%;
+        bottom: 0%;
+    }
+
+    .navbar{
+        width: 100%;
+        font-size: small;
+        
+    }
+    .navbarhead{
+        font-size: large;
+    }
+    .addbutton{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 30px;
+        bottom: 90px;
+    } 
+      /* popup total  */
+    .popup1{
+        width: 80%;
+        font-size: smaller;
+        left: 10%;
+        top: 50px;
+    }
+    .yourname{
+        width: 80%;
+    }
+    .youremail{
+        width: 80%;
+    }
+    .popinput1{
+        width: 80%;
+    }
+    .popinput2_1{
+        width: 80%;
+    }
+    .label1{
+        font-size: small;
+        margin: 0%;
+        margin-left: 20px;
+    }
+    .popinput2{
+        width: 35%;
+    }
+     
+    .custom-file-label{
+        width: 35%;
+        margin: 0%;
+        margin-left: 15px;
+    }
+    .popinput3{
+        width: 80%;
+    }
+
+    .addmovie{
+        width: 60px;
+        height: 40px;
+        margin: 0%;
+        margin-left: 20px;
+        margin-top: 10px;
+        
+    }
+    .reset1{
+        width: 60px;
+        height: 40px;
+        margin: 0%;
+        margin-left: 10px;  
+    }
+
+    .popclose{
+        width: 60px;
+        height: 40px;
+        margin: 0%;
+        margin-left: 10px; 
+        margin-bottom: 10px;
+
+    }
+}
